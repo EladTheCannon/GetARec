@@ -1,0 +1,368 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76E03E30-2B55-434E-A2AC-B0F2497B6FDA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetARec</RootNamespace>
+    <AssemblyName>GetARec</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="BackAdmin\blank.html" />
+    <Content Include="BackAdmin\buttons.html" />
+    <Content Include="BackAdmin\css\font-awesome\font-awesome.min.css" />
+    <Content Include="BackAdmin\css\ltr\bootstrap.min.css" />
+    <Content Include="BackAdmin\css\ltr\sb-admin-2.css" />
+    <Content Include="BackAdmin\css\plugins\dataTables.bootstrap.css" />
+    <Content Include="BackAdmin\css\plugins\metisMenu\metisMenu.css" />
+    <Content Include="BackAdmin\css\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="BackAdmin\css\plugins\morris.css" />
+    <Content Include="BackAdmin\css\plugins\social-buttons.css" />
+    <Content Include="BackAdmin\css\plugins\timeline.css" />
+    <Content Include="BackAdmin\css\rtl\bootstrap.min.css" />
+    <Content Include="BackAdmin\css\rtl\bootstrap.rtl.css" />
+    <Content Include="BackAdmin\css\rtl\sb-admin-2.css" />
+    <Content Include="BackAdmin\extras\image-samples\buttons.png" />
+    <Content Include="BackAdmin\extras\image-samples\tables.png" />
+    <Content Include="BackAdmin\extras\image-samples\typography.png" />
+    <Content Include="BackAdmin\flot.html" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont-v=4.2.0.svg" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont.svg" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BackAdmin\forms.html" />
+    <Content Include="BackAdmin\grid.html" />
+    <Content Include="BackAdmin\images\bootstrap\datatables\sort_asc.png" />
+    <Content Include="BackAdmin\images\bootstrap\datatables\sort_asc_disabled.png" />
+    <Content Include="BackAdmin\images\bootstrap\datatables\sort_both.png" />
+    <Content Include="BackAdmin\images\bootstrap\datatables\sort_desc.png" />
+    <Content Include="BackAdmin\images\bootstrap\datatables\sort_desc_disabled.png" />
+    <Content Include="BackAdmin\index.html" />
+    <Content Include="BackAdmin\js\bootstrap.min.js" />
+    <Content Include="BackAdmin\js\bootstrap\bootstrap.min.js" />
+    <Content Include="BackAdmin\js\bootstrap\dataTables.bootstrap.min.js" />
+    <Content Include="BackAdmin\js\flot\excanvas.min.js" />
+    <Content Include="BackAdmin\js\flot\jquery.flot.js" />
+    <Content Include="BackAdmin\js\flot\jquery.flot.pie.js" />
+    <Content Include="BackAdmin\js\flot\jquery.flot.resize.js" />
+    <Content Include="BackAdmin\js\flot\jquery.flot.time.js" />
+    <Content Include="BackAdmin\js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="BackAdmin\js\jquery-1.11.0.js" />
+    <Content Include="BackAdmin\js\jquery\jquery.dataTables.min.js" />
+    <Content Include="BackAdmin\js\jquery\jquery.min.js" />
+    <Content Include="BackAdmin\js\metisMenu\metisMenu.min.js" />
+    <Content Include="BackAdmin\js\morris\morris.min.js" />
+    <Content Include="BackAdmin\js\raphael\raphael.min.js" />
+    <Content Include="BackAdmin\js\sb-admin-2.js" />
+    <Content Include="BackAdmin\Login.aspx" />
+    <Content Include="BackAdmin\login.html" />
+    <Content Include="BackAdmin\morris.html" />
+    <Content Include="BackAdmin\notifications.html" />
+    <Content Include="BackAdmin\panels-wells.html" />
+    <Content Include="BackAdmin\Register.aspx" />
+    <Content Include="BackAdmin\tables.html" />
+    <Content Include="BackAdmin\typography.html" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="CSS\font-awesome\font-awesome.min.css" />
+    <Content Include="CSS\ltr\bootstrap.min.css" />
+    <Content Include="CSS\ltr\sb-admin-2.css" />
+    <Content Include="CSS\plugins\dataTables.bootstrap.css" />
+    <Content Include="CSS\plugins\metisMenu\metisMenu.css" />
+    <Content Include="CSS\plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="CSS\plugins\morris.css" />
+    <Content Include="CSS\plugins\social-buttons.css" />
+    <Content Include="CSS\plugins\timeline.css" />
+    <Content Include="CSS\rtl\bootstrap.min.css" />
+    <Content Include="CSS\rtl\bootstrap.rtl.css" />
+    <Content Include="CSS\rtl\sb-admin-2.css" />
+    <Content Include="CSS\Style.css" />
+    <Content Include="BackAdmin\MainPage.aspx" />
+    <Content Include="extras\image-samples\buttons.png" />
+    <Content Include="extras\image-samples\tables.png" />
+    <Content Include="extras\image-samples\typography.png" />
+    <Content Include="fonts\fontawesome-webfont-v=4.2.0.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\bootstrap\datatables\sort_asc.png" />
+    <Content Include="images\bootstrap\datatables\sort_asc_disabled.png" />
+    <Content Include="images\bootstrap\datatables\sort_both.png" />
+    <Content Include="images\bootstrap\datatables\sort_desc.png" />
+    <Content Include="images\bootstrap\datatables\sort_desc_disabled.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\bootstrap\dataTables.bootstrap.min.js" />
+    <Content Include="js\flot\excanvas.min.js" />
+    <Content Include="js\flot\jquery.flot.js" />
+    <Content Include="js\flot\jquery.flot.pie.js" />
+    <Content Include="js\flot\jquery.flot.resize.js" />
+    <Content Include="js\flot\jquery.flot.time.js" />
+    <Content Include="js\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="js\jquery-1.11.0.js" />
+    <Content Include="js\jquery\jquery.dataTables.min.js" />
+    <Content Include="js\jquery\jquery.min.js" />
+    <Content Include="js\metisMenu\metisMenu.min.js" />
+    <Content Include="js\morris\morris.min.js" />
+    <Content Include="js\raphael\raphael.min.js" />
+    <Content Include="js\sb-admin-2.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Tutorial.aspx" />
+    <Content Include="upload\icons\1b9af26cc775ae05889760a6cb5da6f5b57237450558fd123ff520e81b86760e.jpg" />
+    <Content Include="upload\icons\depositphotos_64988347-stock-photo-recommended-icon.jpg" />
+    <Content Include="upload\icons\design-0328e51c-de89-4ffc-a5eb-aa3f6a8ecfab.png" />
+    <Content Include="upload\icons\favicon_io\android-chrome-192x192.png" />
+    <Content Include="upload\icons\favicon_io\android-chrome-512x512.png" />
+    <Content Include="upload\icons\favicon_io\apple-touch-icon.png" />
+    <Content Include="upload\icons\favicon_io\favicon-16x16.png" />
+    <Content Include="upload\icons\favicon_io\favicon-32x32.png" />
+    <Content Include="upload\icons\favicon_io\favicon.ico" />
+    <Content Include="upload\icons\istockphoto-1344938101-170667a.jpg" />
+    <Content Include="upload\icons\medal-check-recommendations-icon-one-business-collection-icons-websites-web-design-mobile-app-white-background-188767008.jpg" />
+    <Content Include="upload\icons\recommended-icon-4.jpg" />
+    <Content Include="upload\icons\recommended-icon-9.jpg" />
+    <Content Include="upload\icons\stock-vector-recommended-black-grunge-stamp-icon-sign-and-symbol-vector-illustration-279007580.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BLL\Users.cs" />
+    <Compile Include="App_Code\DAL\UserDAL.cs" />
+    <Compile Include="BackAdmin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackAdmin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackAdmin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DbContext.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial.aspx.cs">
+      <DependentUpon>Tutorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutorial.aspx.designer.cs">
+      <DependentUpon>Tutorial.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackAdmin\Admin.Master" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont-.eot" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont-v=4.2.0.eot" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont-v=4.2.0.ttf" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont-v=4.2.0.woff" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont.eot" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="BackAdmin\fonts\fontawesome-webfont.woff" />
+    <Content Include="BackAdmin\fonts\FontAwesome.otf" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular-.eot" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BackAdmin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="BackAdmin\README.md" />
+    <Content Include="BackAdmin\Main.Master" />
+    <Content Include="fonts\fontawesome-webfont-.eot" />
+    <Content Include="fonts\fontawesome-webfont-v=4.2.0.eot" />
+    <Content Include="fonts\fontawesome-webfont-v=4.2.0.ttf" />
+    <Content Include="fonts\fontawesome-webfont-v=4.2.0.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular-.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="upload\icons\40017176-recommended-icon-blue-internet-button-on-white-background-.webp" />
+    <Content Include="upload\icons\favicon_io\site.webmanifest" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="upload\background\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57678</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57678/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

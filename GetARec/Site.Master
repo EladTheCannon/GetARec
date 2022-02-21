@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GetARec.Site" %>
+
+<!DOCTYPE html>
+
+<html dir="rtl">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title >Get A Recommendations </title>
+    <link rel="icon" href="upload/icons/favicon_io/android-chrome-512x512.png" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/rtl/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- not use this in ltr -->
+    <link href="css/rtl/bootstrap.rtl.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="css/plugins/timeline.css" rel="stylesheet">
+    <link href="css/font-awesome/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/rtl/sb-admin-2.css" rel="stylesheet">
+     <!-- Custom Fonts -->
+    <link href="css/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container" id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" style="margin-bottom: 0" >
+            <div class="navbar-header" style="float:left" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"  href="#" > Get A Rec   <span ><img id="logo" src="upload/icons/design-0328e51c-de89-4ffc-a5eb-aa3f6a8ecfab.png" alt="Get A Rec"  /></span></a>
+            </div>
+            <!-- /.navbar-header -->
+         <div class="collapse navbar-collapse navbar-ex1-collapse ">
+            <ul class="navbar-top-links navbar-right collapse navbar-collapse navbar-ex1-collapse  " dir="rtl">
+                <li class="navbar-brand" dir="rtl">
+                    <a class="navbar-brand"  href="Default.aspx" dir="rtl">ראשי</a>      
+                </li>
+                <li class="navbar-brand">
+                    <a class="navbar-brand" href="About.aspx" dir="rtl">אודות</a>   
+                </li>
+                <li class="navbar-brand">
+                    <a class="navbar-brand" href="Tutorial.aspx">מדריך</a>
+                </li>
+                <!-- /.dropdown -->
+                <li class="navbar-brand" >
+                    <a class="navbar-brand" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw "></i> <i class="fa fa-caret-down"></i>  האזור האישי
+                    </a><br /><br /><br />
+                    <ul class="dropdown-menu dropdown-user ">
+                        <li><a href="Login.aspx"><i class="fa fa-user fa-fw"></i> התחברות</a>
+                        </li>
+                        <li><a href="Register.aspx"><i class="fa fa-user fa-fw"></i> הרשמה</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <li class="navbar-brand">
+                    <a class="navbar-brand" href="ContactUs.aspx">צור קשר</a>
+                </li>
+             </ul>
+            </div>
+             <!-- /.navbar-top-links -->
+           </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                
+            <asp:ContentPlaceHolder ID="MainCnt" runat="server">
+            </asp:ContentPlaceHolder>      
+                    
+               
+                    <h1 class="page-header"></h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+             
+        </div>
+            <h6>© כל הזכויות שמורות לאלעד ושמחה</h6>
+        <!-- /#page-wrapper -->
+           
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+
+      <!-- Custom Theme JavaScript -->
+    <script src="js/sb-admin-2.js"></script>
+
+        <asp:ContentPlaceHolder ID="FooterCnt" runat="server">
+            </asp:ContentPlaceHolder>
+                        
+    </form>
+</body>
+</html>
